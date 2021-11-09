@@ -1,0 +1,108 @@
+
+
+<div style="padding: 2%;">
+    <div class="card card-primary" >
+        <div class="card-header">
+          <h3 class="card-title">Add Categorie<small></small></h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form role="form" id="quickForm" novalidate="novalidate" (ngSubmit)="insertData()">
+          <div class="card-body">
+            <div class="form-group">
+              <label for="cat">Catgorie Name</label>
+              <input type="text" name="cat" class="form-control" id="cat" placeholder="Enter Categorie Name" [(ngModel)]="categorie.name_categ">
+            </div>
+           
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    <div class="card card-primary card-outline">
+        <div class="card-header">
+          <h3 class="card-title">Inbox</h3>
+    
+          <div class="card-tools">
+            <div class="input-group input-group-sm">
+              <input type="text" class="form-control" placeholder="Search Mail">
+              <div class="input-group-append">
+                <div class="btn btn-primary">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.card-tools -->
+        </div>
+        <!-- /.card-header -->
+        <div class="card-body p-0">
+          <div class="mailbox-controls">
+            <!-- Check all button -->
+            <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+            </button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+              <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+              <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+            </div>
+            <!-- /.btn-group -->
+            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+            <div class="float-right">
+              1-50/200
+              <div class="btn-group">
+                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <!-- /.btn-group -->
+            </div>
+            <!-- /.float-right -->
+          </div>
+          <div class="table-responsive mailbox-messages">
+            <table class="table table-hover table-striped">
+              <tbody>
+              <tr>
+           <th>Categorie name</th>
+           <th>Action</th>
+              
+              </tr>
+              <tr *ngFor="let cat of categories">
+                <td>{{cat.name_categ}}</td>
+              <td>  <button class="btn btn-danger btn-sm" (click)="deleteCat(cat.id)">Delete</button>
+             <button class="btn btn-primary btn-sm" routerLink="/admin/editcat/{{cat.id}}" >Update</button>
+             <button class="btn btn-secondary btn-sm" routerLink="/admin/souscategories/{{cat.id}}">Show Sous categories</button></td>
+              </tr>
+              
+              </tbody>
+            </table>
+            <!-- /.table -->
+          </div>
+          <!-- /.mail-box-messages -->
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer p-0">
+          <div class="mailbox-controls">
+            <!-- Check all button -->
+            <button type="button" class="btn btn-default btn-sm checkbox-toggle"><i class="far fa-square"></i>
+            </button>
+            <div class="btn-group">
+              <button type="button" class="btn btn-default btn-sm"><i class="far fa-trash-alt"></i></button>
+              <button type="button" class="btn btn-default btn-sm"><i class="fas fa-reply"></i></button>
+              <button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i></button>
+            </div>
+            <!-- /.btn-group -->
+            <button type="button" class="btn btn-default btn-sm"><i class="fas fa-sync-alt"></i></button>
+            <div class="float-right">
+              1-50/200
+              <div class="btn-group">
+                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-left"></i></button>
+                <button type="button" class="btn btn-default btn-sm"><i class="fas fa-chevron-right"></i></button>
+              </div>
+              <!-- /.btn-group -->
+            </div>
+            <!-- /.float-right -->
+          </div>
+        </div>
+      </div></div>

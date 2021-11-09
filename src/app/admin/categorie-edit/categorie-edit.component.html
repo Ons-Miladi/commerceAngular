@@ -1,0 +1,21 @@
+<div style="padding:2%;">
+<div class="card card-primary" >
+    <div class="card-header">
+      <h3 class="card-title">Edit Categorie<small></small></h3>
+    </div>
+   
+    <form role="form" id="quickForm" novalidate="novalidate" (ngSubmit)="updateCategorie()" >
+      <div class="card-body">
+        <div class="form-group">
+          <label for="cat">Catgorie Name</label>
+          <input type="text" name="cat" class="form-control" id="cat" placeholder="Enter Categorie Name" [(ngModel)]="categorie.name_categ">
+        </div>
+       
+      </div>
+      <!-- /.card-body -->
+      <div class="card-footer">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
