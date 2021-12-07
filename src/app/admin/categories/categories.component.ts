@@ -24,15 +24,16 @@ deleteCat(id){
   this.categorieservice.deleteCategorie(id).subscribe(res=>{
     this.getcategoris();
   })
-}
-insertData(){
-  this.categorieservice.addCategorie(this.categorie).subscribe(res=>{
-    this.getcategoris();
-  })
 }/*
 updatecat(id,form){
 this.categorieservice.updateCategorie(id,form).subscribe(res=>{
   this.getcategoris();
 })
 }*/
+
+insertData(){
+  this.categorieservice.addCategorie(this.categorie).subscribe(res=>{
+    this.getcategoris();
+  })
+}
 }

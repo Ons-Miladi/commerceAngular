@@ -3,4 +3,5 @@ export class Product{
     price:any;
     image:any;
     souscatid:any;
+    
 }

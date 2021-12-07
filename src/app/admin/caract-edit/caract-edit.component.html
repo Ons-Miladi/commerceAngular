@@ -1,0 +1,34 @@
+<div style="padding: 2%;">
+    <div class="card card-primary" >
+      <div class="card-header">
+        <h3 class="card-title">Update<small></small></h3>
+      </div>
+      <!-- /.card-header -->
+      <!-- form start -->
+      <form role="form" id="quickForm" novalidate="novalidate" (ngSubmit)="Updatecaract()">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="taille">Taille</label>
+            <input type="text" name="taille" class="form-control" id="taille" placeholder="Enter size" [(ngModel)]="carac.taille" name="taille">
+          </div>
+          <div class="form-group">
+            <label for="couleur">Color</label>
+            <input type="text" name="couleur" class="form-control" id="couleur" placeholder="Enter Color" [(ngModel)]="carac.couleur" name="couleur">
+          </div>
+          <div class="form-group">
+            <label for="quantite">quantite</label>
+            <input type="text" name="quantite" class="form-control" id="quantite" placeholder="Enter quantity" [(ngModel)]="carac.quantite" name="quantite">
+          </div>
+          <div class="form-group">
+         
+            <input type="text"  class="form-control" id="idproduct" [(ngModel)]="idproduct" name="idproduct" type="hidden">
+          </div>
+         
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+    </div>

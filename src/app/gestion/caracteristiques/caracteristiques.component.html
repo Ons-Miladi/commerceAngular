@@ -1,0 +1,44 @@
+<section class="product_section layout_padding">
+    <div class="container" >
+       <div class="heading_container heading_center">
+          <h2>
+             The <span>product</span>
+          </h2>
+       </div>
+ 
+       <div class="row">
+        <div class="col-md-6">
+            <div *ngFor="let jo of jointure ; let i = index">
+            <img class="float-right" *ngIf="i < 1"  src="{{jo.image}}" style="width: 400px;height: 700px;"/>
+              
+            </div>
+          
+        </div>
+        <div class="col-md-6">
+              
+            <div class="container-fluid"  *ngFor="let joo of jointure ; let i = index">
+               <div *ngIf="i < 1">
+                <h3> {{joo.name}}</h3>      
+            <p>Reference:  {{joo.idproduct}}</p>   
+               
+             <p>Price: {{joo.price}}</p>
+          
+                </div>
+            </div>
+            <div class="box"  *ngFor="let dat of data">
+                
+                  
+         <p>Taille:   {{dat.taille}}</p>
+         <p>Couleur: {{dat.couleur}}</p>  
+         <p>Quantity:{{dat.quantite}}</p>   
+
+            </div>
+        </div>
+      
+  
+    </div>
+
+       
+  
+</div>
+</section>

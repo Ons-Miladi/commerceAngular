@@ -12,6 +12,9 @@ export class SouscategoriesComponent implements OnInit {
 idcat:any;
 souscategories:any;
 souscateg=new SousCategorie();
+aa:any;
+bb:any;
+
   constructor(private ssouscatservice:SouscategoriesService,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
@@ -29,7 +32,16 @@ delete(id){
   })
 }
 AddSousCategorie(){
-  this.ssouscatservice.addSouscategorie(this.souscateg).subscribe(res=>{
+  const formData=new FormData();
+  this.aa=$("#nom").val();
+ this.bb=$("#idcat").val();
+
+
+formData.append("nom",this.aa);
+formData.append("idcat",this.bb);
+
+
+  this.ssouscatservice.addSouscategorie(formData).subscribe(res=>{
     this.getSouscategories();
   })
 }

@@ -5,16 +5,16 @@
         </div>
         <!-- /.card-header -->
         <!-- form start -->
-        <form role="form" (ngSubmit)="AddSousCategorie()">
+        <form role="form" id="quic" novalidate="novalidate" (ngSubmit)="AddSousCategorie()">
           <div class="card-body">
             <div class="form-group">
-              <label for="name">Sous Categorie Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Enter Name of Sous categorie" [(ngModel)]="souscateg.nom" name="nom">
+              <label for="nom">Sous Categorie Name</label>
+              <input type="text" class="form-control" id="nom" placeholder="Enter Name of Sous categorie" [(ngModel)]="souscateg.nom" name="nom">
             </div>
             
             <div class="form-group">
        
-              <input type="text" class="form-control" id="catid" placeholder="catid" [(ngModel)]="idcat" name="idcat" type="hidden">
+              <input type="text" class="form-control" id="idcat" placeholder="catid" [(ngModel)]="idcat" name="idcat" type="hidden">
             </div>
           
            
