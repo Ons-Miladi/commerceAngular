@@ -1,3 +1,4 @@
+import { ConnexionComponent } from './connexion/connexion.component';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

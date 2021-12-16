@@ -18,6 +18,7 @@ const routes: Routes = [
     {path:'caracteristiques/:id',component:CaracteristiquesComponent}
    
   ]}
+
 ];
 @NgModule({
   imports: [RouterModule.forChild(routes)],

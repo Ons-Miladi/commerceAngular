@@ -27,7 +27,9 @@ Updatecarac(form,id){
 getCaractJointure(id){
   return this.http.get(this.url+'getCaracteristiquesByJointure/'+id);
 }
-
+AddProductToPanier(form){
+  return this.http.post(this.url+'AddProductToPanier',form);
+}
 
 
 }

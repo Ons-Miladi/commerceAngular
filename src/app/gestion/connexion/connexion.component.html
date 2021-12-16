@@ -1,43 +1,38 @@
 
-    <button type="button" class="btn btn-success" (click)="showToastr()">Show </button>
+    <body class="register-page" style="min-height: 586.781px;">
+      <div class="register-box">
+    <div class="card card-primary">
+      <div class="card-header">
+        <h3 class="card-title">Quick Example <small>jQuery Validation</small></h3>
+      </div>
+    <div class="alert alert-danger" *ngIf="eureur==1">
+<strong>Erreur...</strong>
+
+    </div>
 
 
+      <form role="form" id="quickForm" novalidate="novalidate" (ngSubmit)="Connexion()">
+        <div class="card-body">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" [(ngModel)]="user.email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password" [(ngModel)]="user.password" password="password">
+          </div>
+         
+        </div>
+        <!-- /.card-body -->
+        <div class="card-footer">
+          <button type="submit" class="btn btn-primary" (click)="Connexion()">Submit</button>
+        </div>
+      </form>
+    </div>
+      </div>
+      </body>
       
       
-          <form method="post" (ngSubmit)="Connexion()">
-            <div class="input-group mb-3">
-              <input type="email" class="form-control" placeholder="Email" [(ngModel)]="user.email" name="email">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-envelope"></span>
-                </div>
-              </div>
-            </div>
-            <div class="input-group mb-3">
-              <input type="password" class="form-control" placeholder="Password" [(ngModel)]="user.password" password="password">
-              <div class="input-group-append">
-                <div class="input-group-text">
-                  <span class="fas fa-lock"></span>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-8">
-                <div class="icheck-primary">
-                  <input type="checkbox" id="remember">
-                  <label for="remember">
-                    Remember Me
-                  </label>
-                </div>
-              </div>
-     
-              <div class="col-4">
-                <button type="submit" class="btn btn-primary btn-block">Sign In</button>
-              </div>
-             
-            </div>
-          </form>
-  
    
     <script src="../../plugins/jquery/jquery.min.js"></script>
    

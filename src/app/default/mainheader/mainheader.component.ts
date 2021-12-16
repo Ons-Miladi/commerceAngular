@@ -1,3 +1,4 @@
+import { ConnexionComponent } from './../../gestion/connexion/connexion.component';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CategorieSousCateg } from 'src/app/models/categorieSousCategories.module';

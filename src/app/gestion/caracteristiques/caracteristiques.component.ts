@@ -12,6 +12,10 @@ export class CaracteristiquesComponent implements OnInit {
 id;any;
 data:any;
 jointure:any;
+prodpanier:any;
+total=0;
+monObjet:any;
+monObj:any;
   constructor(private serviceproduct:ProductService,private servicexcaracteri:CaractService,private activatedRoute:ActivatedRoute) { }
 
   ngOnInit() {
@@ -28,6 +32,13 @@ getData(){
 getJointureCaracte(){
   return  this.servicexcaracteri.getCaractJointure(this.id).subscribe(res=>{
     this.jointure=res;
+    localStorage.setItem('monObjet', JSON.stringify(this.jointure));
+    this.monObjet = JSON.parse(localStorage.getItem('monObjet'));
+   console.log(this.monObjet)
   })
+}
+AjouterAuPanier(){
+this.total+=1
+
 }
 }
